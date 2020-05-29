@@ -3,8 +3,12 @@ from concurrent.futures import ThreadPoolExecutor
 
  
 def gas(no):
-
-if __name__ == '__main__':
+	s = requests.Session()
+	url = "https://www.indihome.co.id/verifikasi-layanan/login-otp"
+	req = s.get(url).text
+	token = re.findall(r"name=\"_token\" value=\"(.*?)\"", req)[0]
+	
+	if __name__ == '__main__':
 	print(C+'Subscribe YT'+W+' Gua Dlu Ya Su !'+C+' :V')
 	sleep(2)
 	os.system('clear')
@@ -12,11 +16,6 @@ if __name__ == '__main__':
 	sleep(7)
 	Spam()
 
-	s = requests.Session()
-	url = "https://www.indihome.co.id/verifikasi-layanan/login-otp"
-	req = s.get(url).text
-	token = re.findall(r"name=\"_token\" value=\"(.*?)\"", req)[0]
-		
 	data = {
 	"_token":token,
 	"msisdn":no
