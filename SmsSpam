@@ -1,15 +1,17 @@
 import requests, sys, re
 from concurrent.futures import ThreadPoolExecutor
 
- if __name__ == '__main__':
+ 
+def gas(no):
+
+if __name__ == '__main__':
 	print(C+'Subscribe YT'+W+' Gua Dlu Ya Su !'+C+' :V')
 	sleep(2)
 	os.system('clear')
 	os.system('xdg-open https://www.youtube.com/channel/UCm44L0CGNh74uc3uti_L3BQ')
 	sleep(7)
 	Spam()
- 
-def gas(no):
+
 	s = requests.Session()
 	url = "https://www.indihome.co.id/verifikasi-layanan/login-otp"
 	req = s.get(url).text
